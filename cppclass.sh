@@ -22,9 +22,9 @@ echo -en "{\n"															>> $HEADER
 echo -en "\tpublic:\n"													>> $HEADER
 echo -en "\t\t${CLASSNAME}();\n"										>> $HEADER
 echo -en "\t\t${CLASSNAME}(const ${CLASSNAME} & original);\n"			>> $HEADER
-echo -en "\t\tfriend void swap($CLASSNAME & first, $CLASSNAME & second);\n"	>> $HEADER
+echo -en "\t\tvoid\t\tswap($CLASSNAME & first, $CLASSNAME & second);\n"	>> $HEADER
 echo -en "\t\t$CLASSNAME & operator=(const $CLASSNAME & that);\n"		>> $HEADER 
-echo -en "\t\tvirtual ~${CLASSNAME}();\n"								>> $HEADER
+echo -en "\t\tvirtual\t\t~${CLASSNAME}();\n"								>> $HEADER
 echo -en "\tprotected:\n"												>> $HEADER
 echo -en "\tprivate:\n"													>> $HEADER
 echo -en "};\n"															>> $HEADER
