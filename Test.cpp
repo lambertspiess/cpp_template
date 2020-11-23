@@ -5,12 +5,23 @@ Test::Test()
 	//ctor
 }
 
-Test::Test(const Test)
+Test::Test(const Test & original)
 {
-	//ctor
+	//cctor
 }
 
 Test::~Test()
 {
 	//dtor
+}
+
+friend void		swap(Test & first, Test & second)
+{
+	//std::swap(first.member, second.member);
+}
+
+Test & Test::operator=(const Test & that)
+{
+	swap(*this, that);
+	return (*this);
 }
